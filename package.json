@@ -1,0 +1,27 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "A command-line database content management system (CMS) that tracks employees. It was created using MySQL, Inquirer, and NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Briggoh/Employee-Tracker.git"
+  },
+  "keywords": [
+    "Employee",
+    "Tracker",
+    "Database",
+    "MySQl",
+    "Bootcamp"
+  ],
+  "author": "Hayley Briggs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Briggoh/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/Briggoh/Employee-Tracker#readme"
+}
