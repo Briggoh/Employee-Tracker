@@ -13,14 +13,14 @@ The employee tracker is a command-line application that is meant to assist in th
 ## Usage
 - With the installation steps successfully completed, the application can be started by using the code "node server" in the terminal.
 - Upon running the application, the user will be met with a number of questions functions including:
-    1. View All Employees
-    2. Add Employee
-    3. Update Employee Role
-    4. View All Roles
-    5. Add Role
-    6. View All Departments
-    7. Add Departments
-    8. Quit
+    - View All Employees
+    - Add Employee
+    - Update Employee Role
+    - View All Roles
+    - Add Role
+    - View All Departments
+    - Add Departments
+    - Quit
 - Clicking any of the "view" options will access the data stored in mySQL and display it directly within the terminal.
 - Clicking any of the "add" options will access the data stored in mySQL and implement additional data to their liking. 
 
