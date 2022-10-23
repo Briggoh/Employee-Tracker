@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/Briggoh/Employee-Tracker#readme",
   "dependencies": {
+    "chalk": "^5.1.2",
+    "colors": "^1.4.0",
     "console.table": "^0.10.0",
     "dotenv": "^16.0.3",
     "inquirer": "^8.2.4",

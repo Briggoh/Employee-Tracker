@@ -1,3 +1,4 @@
+var colors = require('colors');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
@@ -13,12 +14,12 @@ const db = mysql.createConnection(
 );
 
 const prompt = () => {
-    console.log("*       _///_                          ")
-    console.log("        (o o)                          ")
-    console.log("+----oOO-{_}-OOo----------------------+")
-    console.log("|          Welcome to the             |")
-    console.log("|         Employee Tracker!           |")
-    console.log("+------------------------------------*/")
+    console.log("*       _///_                          ".green)
+    console.log("        (o o)                          ".green)
+    console.log("+----oOO-{_}-OOo----------------------+".green)
+    console.log("|          Welcome to the             |".green)
+    console.log("|         Employee Tracker!           |".green)
+    console.log("+------------------------------------*/".green)
     return inquirer
         .prompt([
             {
@@ -34,7 +35,7 @@ const prompt = () => {
                     'Add Role',
                     'View All Departments',
                     'Add Department',
-                    'Quit',
+                    'Quit'.yellow,
                 ],
             },
         ])
@@ -112,10 +113,15 @@ function addEmployee() {
                 if (error) {
                     console.log(error);
                 }
-                console.log("###########################")
-                console.log("#    Employee has been    #")
-                console.log("#         added!          #")
-                console.log("###########################")
+                console.log("###########################".rainbow)
+                console.log("#    Employee has been    #".rainbow)
+                console.log("#         added!          #".rainbow)
+                console.log("###########################".rainbow)
+                console.log("*                         *")
+                console.log("*                         *")
+                console.log("  returning to main menu   ")
+                console.log("*                         *")
+                console.log("*                         *")
                 prompt();
             });
         });
@@ -186,10 +192,15 @@ function addRole() {
                 if (error) {
                     console.error(error);
                 }
-                console.log("###########################")
-                console.log("#    New role has been    #")
-                console.log("#        added!           #")
-                console.log("###########################")
+                console.log("###########################".rainbow)
+                console.log("#    New role has been    #".rainbow)
+                console.log("#        added!           #".rainbow)
+                console.log("###########################".rainbow)
+                console.log("*                         *".rainbow)
+                console.log("*                         *")
+                console.log("  returning to main menu   ")
+                console.log("*                         *")
+                console.log("*                         *")
                 prompt();
             });
         });
@@ -223,10 +234,15 @@ function addDepartment() {
                 if (error) {
                     console.error(error);
                 }
-                console.log("###########################")
-                console.log("#    New department       #")
-                console.log("#    has been added!      #")
-                console.log("###########################")
+                console.log("###########################".rainbow)
+                console.log("#    New department       #".rainbow)
+                console.log("#    has been added!      #".rainbow)
+                console.log("###########################".rainbow)
+                console.log("*                         *")
+                console.log("*                         *")
+                console.log("  returning to main menu   ")
+                console.log("*                         *")
+                console.log("*                         *")
                 prompt();
             });
         });
