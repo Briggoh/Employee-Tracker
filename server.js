@@ -13,6 +13,12 @@ const db = mysql.createConnection(
 );
 
 const prompt = () => {
+    console.log("*       _///_                          ")
+    console.log("        (o o)                          ")
+    console.log("+----oOO-{_}-OOo----------------------+")
+    console.log("|          Welcome to the             |")
+    console.log("|         Employee Tracker!           |")
+    console.log("+------------------------------------*/")
     return inquirer
         .prompt([
             {
@@ -106,7 +112,10 @@ function addEmployee() {
                 if (error) {
                     console.log(error);
                 }
-                console.log('The employee has been successfully added!');
+                console.log("###########################")
+                console.log("#    Employee has been    #")
+                console.log("#         added!          #")
+                console.log("###########################")
                 prompt();
             });
         });
@@ -177,7 +186,10 @@ function addRole() {
                 if (error) {
                     console.error(error);
                 }
-                console.log('The role has been successfully added!');
+                console.log("###########################")
+                console.log("#    New role has been    #")
+                console.log("#        added!           #")
+                console.log("###########################")
                 prompt();
             });
         });
@@ -211,7 +223,10 @@ function addDepartment() {
                 if (error) {
                     console.error(error);
                 }
-                console.log('The department has been successfully added!');
+                console.log("###########################")
+                console.log("#    New department       #")
+                console.log("#    has been added!      #")
+                console.log("###########################")
                 prompt();
             });
         });
