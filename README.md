@@ -27,6 +27,8 @@ The employee tracker is a command-line application that is meant to assist in th
 ## Preview 
 Attached below is a video containing a demonstration of the deployed application.
 https://www.loom.com/share/b89b2fad18d14b188eb0fccddb716d41
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/109489824/198372366-5689535e-3731-4369-bb0b-40fcf1101608.gif)
+
 
 ## Contributions
 Although a 3rd party's interest in helping me is always appreciated, I will not be accepting any contributions for this project.
