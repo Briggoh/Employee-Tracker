@@ -1,8 +1,13 @@
+// Requiring colors NPM package
 var colors = require('colors');
+// Requiring mysql2 package
 const mysql = require('mysql2');
+// Requiring inquirer package
 const inquirer = require('inquirer');
+// Requiring console.table package
 const cTable = require('console.table');
 
+// Establishing connection with server
 const db = mysql.createConnection(
     {
         host: 'localhost',
@@ -13,6 +18,7 @@ const db = mysql.createConnection(
     console.log('Connected to the employee_db database.')
 );
 
+// Inquirer prompt
 const prompt = () => {
     console.log("*       _///_                          ".green)
     console.log("        (o o)                          ".green)
@@ -69,6 +75,7 @@ const prompt = () => {
         });
 };
 
+// Function to view all the employees
 function viewAllEmployees() {
     let sql =
         "SELECT e.id, e.first_name, e.last_Name, role.title, department.name AS department, role.salary, CONCAT(m.first_name, ' ', m.first_name) as manager FROM employee e JOIN role ON e.role_id = role.id JOIN department ON role.department_id = department.id LEFT JOIN employee m ON m.id = e.manager_id ORDER BY e.id ASC";
@@ -82,6 +89,7 @@ function viewAllEmployees() {
     });
 }
 
+// Function to add employees
 function addEmployee() {
     inquirer
         .prompt([
@@ -127,6 +135,7 @@ function addEmployee() {
         });
 }
 
+// Function to update employee role
 function updateEmployeeRole() {
     inquirer
         .prompt([
@@ -154,6 +163,7 @@ function updateEmployeeRole() {
         });
 }
 
+// Function to view all roles
 function viewAllRoles() {
     let sql = 'SELECT * FROM role';
 
@@ -166,6 +176,7 @@ function viewAllRoles() {
     });
 }
 
+// Function to add role
 function addRole() {
     inquirer
         .prompt([
@@ -206,6 +217,7 @@ function addRole() {
         });
 }
 
+// Function to view all departments
 function viewAllDepartments() {
     let sql = 'SELECT * FROM department';
 
@@ -218,6 +230,7 @@ function viewAllDepartments() {
     });
 }
 
+// Function to add a department
 function addDepartment() {
     inquirer
         .prompt([
@@ -247,7 +260,7 @@ function addDepartment() {
             });
         });
 }
-
+// Quit function
 function quit() {
     process.exit(1);
 }
